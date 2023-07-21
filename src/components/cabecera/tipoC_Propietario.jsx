@@ -33,31 +33,33 @@ export const DataPropietario = (props) => (
 
           <View style={styles.section}>
               <Image 
-                src={props.data.imagen} 
+                src={"/public/images/titulo.png"} 
                 style={styles.imagen}
                 fixed={true}
               />
           </View>
 
-          <Text style={{...styles.text , marginLeft: 5}}>de {props.data.duenio}</Text>
-          <Text style={{...styles.text , marginLeft: 5}}>{props.data.direccion}</Text>
-          <Text style={{...styles.text , marginLeft: 5}}>{props.data.telefono}</Text>
-          <Text style={{...styles.text , marginLeft: 5}}>{props.data.gmail}</Text>
+          <Text style={{...styles.text , marginLeft: 5}}>de {props.data?.nombre_emisor}</Text>
+          <Text style={{...styles.text , marginLeft: 5}}>{props.data?.direccion}</Text>
+          <Text style={{...styles.text , marginLeft: 5}}>{props.data?.telefono}</Text>
+          <Text style={{...styles.text , marginLeft: 5}}>{props.data?.correo_electronico}</Text>
 
       </View>
       <View style={styles.blockStandarCentrado}>
 
           {/* B o C */}
-          <Text style={{fontSize: 50}}>{props.data.tipo}</Text>
+          <Text style={{fontSize: 50}}>
+            C
+          </Text>
 
       </View>
       <View style={styles.blockStandar}>
 
           <View style={{height: 50}} />
-          <Text style={styles.text}>N° {props.data.numero}</Text>
-          <Text style={styles.text}>Fecha: {props.data.fecha}</Text>
-          <Text style={styles.text}>{props.data.origen}</Text>
-          <Text style={styles.text}>Número de hoja: {props.numeroHoja}</Text>
+          <Text style={styles.text}>N° {props.data?.numero_de_factura}</Text>
+          <Text style={styles.text}>Fecha: {props.data?.fecha}</Text>
+          <Text style={styles.text}>{props.data?.tipo_factura}</Text>
+          <Text style={styles.text}>Número de hoja: {props?.numeroHoja}</Text>
 
       </View>
 

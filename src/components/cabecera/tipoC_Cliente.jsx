@@ -23,20 +23,15 @@ export const DataCliente = (props) => {
   return (
     <View style={styles.cabecera}>
         <View style={styles.blockStandar}>
-
-            <Text style={styles.textResaltado}>{props.data.tipoVenta}</Text>
-            {props.data.cliente.estado && 
+            <Text style={styles.textResaltado}>{props.data?.tipo_venta}</Text>
               <View>
                 <Text style={styles.text}>Cliente: </Text>
-                <Text style={styles.text}>{props.data.cliente.nombre} {props.data.cliente.apellido}</Text>
-                <Text style={styles.text}>Número de Cliente: {props.data.cliente.numeroDeCliente}</Text>
+                <Text style={styles.text}>{props.data?.nombre_receptor}</Text>
+                <Text style={styles.text}>Número de Cliente: {props.data?.numero_de_cliente}</Text>
               </View>
-            }
-            <Text style={styles.text}>{props.data.localidad}</Text>
-            <Text style={styles.text}>{props.data.pago}</Text>
-
+            <Text style={styles.text}>{props.data?.localidad}</Text>
+            <Text style={styles.text}>{props.data?.medio_de_pago}</Text>
         </View>
     </View>
   );
 }
-  
